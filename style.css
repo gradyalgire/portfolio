@@ -1,0 +1,225 @@
+/* ===== Body Styles ===== */
+body {
+    font-family: 'Roboto Mono', monospace; /* font style */ 
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px; /* adjust based on header height */
+  }  
+
+/* ===== Header ===== */
+header {
+    position: sticky; /* keeps header at the top of the page */
+    top: 0; /* position from the top (required for sticky to work) */
+
+    background-color: #ffffff;
+    color: #000000; 
+    padding: 0 30px; /* space around the header */
+
+    display: flex; /* enables flexbox layout */
+    align-items: center; /* centers vertically */
+    justify-content: space-between; /* space between items */
+
+    border-block: 2px solid #000000; /* line border on top and bottom*/
+}
+
+/* === Navigation Bar === */
+header .nav-bar {
+    display: flex; /* enables flexbox layout */
+    align-items: center; /* centers vertically */
+    justify-content: space-between; /* space between items */
+    position: relative; /* allows absolute positioning of child elements */
+}
+
+.nav-bar .links {
+    display: flex; /* enables flexbox layout (needed for gap) */
+    gap: 30px; /* space between items */
+}
+
+/* individual nav bar links */
+.links a {
+    color: #000000;
+    text-decoration: none; /* removes underline from links */
+}
+
+.links a:hover {
+    text-decoration: underline; /* adds underline on hover */
+    color: #000000;
+    transition: color 0.3s ease; /* smooth transition for color change */
+    scale: 1.1; /* scales up the link on hover */
+}
+/* === Navigation Bar End === */
+/* ===== Header End ===== */
+
+/* ===== Main ===== */
+/* === About Me === */
+.about-me {
+    display: flex; /* enables flexbox layout */
+    align-items: center; /* centers vertically */
+    justify-content: space-between; /* centers horizontally */
+    padding: 100px 300px; /* space around the section */
+}
+
+.about-me-text {
+    max-width: 500px;
+    font-size: 22px; /* font size */
+}
+
+.about-me-image img {
+    border-radius: 50%;
+    width: 500px;       /* or any fixed size */
+    height: 500px;
+    object-fit: cover;  /* ensures the image covers the circle without distortion */
+    border-style: solid; /* border style */
+}
+/* === About Me End === */
+
+/* === Skills === */
+.divider-languages {
+    display: flex; /* enables flexbox layout */
+    align-items: center; /* centers vertically */
+    justify-content: space-between; /* centers horizontally */
+    padding: 0 30px; /* space around the section */;
+
+    border-block: 2px solid #000000; /* line border on top and bottom*/
+}
+/* === Skills End === */
+
+/* === Projects === */
+.projects {
+    display: flex; /* enables flexbox layout */
+    align-items: center; /* centers vertically */
+    justify-content: space-between; /* centers horizontally */
+    padding: 100px 250px; /* space around the section */
+    gap: 50px; /* space between items */
+}
+
+.info {
+    position: relative;
+    height: 550px;
+    width: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+}
+
+.project-info {
+    position: absolute;
+    overflow: hidden; /* hides overflow content */
+}
+
+.project-slider {
+    position: relative;
+    display: flex; /* enables flexbox layout */
+    align-items: center; /* centers vertically */
+    justify-content: space-between; /* centers horizontally */
+    width: 100%;
+    height: 550px;
+    width: 800px;
+    overflow: hidden;
+}
+
+.project-slider button {
+    background-color: transparent; /* transparent background */
+    position: relative;
+    border: none; /* no border */
+    cursor: pointer; /* pointer cursor on hover */
+    font-size: xxx-large; /* font size */
+    font-family: monospace;
+    font-weight: bold;
+    opacity: 0.2; /* initial opacity */
+}
+
+.project-slider button:hover {
+    border: none; /* no border */
+    cursor: pointer; /* pointer cursor on hover */
+    opacity: 1; /* initial opacity */
+    transition: opacity 0.3s ease; /* smooth transition for opacity change */
+}
+
+.project-card {
+    position: absolute;
+    width: 600px;
+    height: 400px;
+    text-align: justify;
+    border-radius: 20px;
+    padding: 0px;
+    transition:  0.5s;
+    transition: scale 0.1s; /* smooth transition for scaling */
+    left: calc(50% - 300px);
+    border: 2px solid #000000; /* border style */
+    overflow: hidden; /* hides overflow content */
+}
+
+.project-card:hover {
+    scale: 1.02; /* scales up the card on hover */
+    cursor: pointer; /* pointer cursor on hover */
+}
+/* === Projects End === */
+
+/* === Contact === */
+.divider-contact {
+    display: flex; /* enables flexbox layout */
+    align-items: center; /* centers vertically */
+    justify-content: space-between; /* centers horizontally */
+    padding: 0 30px; /* space around the section */;
+
+    border-block: 2px solid #000000; /* line border on top and bottom*/
+}
+
+form {
+    display: flex; /* enables flexbox layout */
+    align-items: center; /* centers vertically */
+    gap: 75px; /* space between items */
+
+    font-size: 20px; /* font size */
+    font-weight: bold; /* font weight */
+}
+
+form .message {
+    display: flex; /* enables flexbox layout */
+    align-items: center; /* centers vertically */
+    gap: 10px; /* space between items */
+}
+
+form .name input,
+form .email input {
+    font-weight: bold;
+    font-size: 20px; /* font size */
+    padding: 5px; /* space inside the input */
+    border: 2px solid #000000; /* border style */
+    border-radius: 5px; /* rounded corners */
+}
+
+form .message textarea {
+    font-weight: bold;
+    font-size: 16px; /* font size */
+    padding: 5px; /* space inside the input */
+    border: 2px solid #000000; /* border style */
+    border-radius: 5px; /* rounded corners */
+    width: 300px; /* width of the textarea */;
+}
+
+form .message button {
+    font-weight: bold;
+    font-size: 15px; /* font size */
+    padding: 5px 10px; /* space inside the button */
+    border: 2px solid #000000; /* border style */
+    border-radius: 5px; /* rounded corners */
+    background-color: #ffffff; /* background color */
+    cursor: pointer; /* pointer cursor on hover */
+}
+
+form .message button:hover {
+    font-weight: bold;
+    font-size: 16px; /* font size */
+    padding: 4px 5.5px; /* space inside the button */
+    border: 3px solid #000000; /* border style */
+    border-radius: 5px; /* rounded corners */
+    background-color: #ffffff; /* background color */
+    cursor: pointer; /* pointer cursor on hover */
+}
+/* === Contact End === */
+/* ===== Main End ===== */

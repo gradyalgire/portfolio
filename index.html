@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+
+        <h1>Grady Algire</h1>
+
+        <div class="nav-bar">
+            <div class="links">
+                <a href="#about-me">About</a>
+                <a href="#projects">Projects</a>
+                <a href="https://github.com/gradyalgire" target="_blank">Github</a>
+                <a href="https://www.linkedin.com/in/grady-algire-abb44a265/" target="_blank">LinkedIn</a>
+                <a href="resume.pdf" target="_blank">Resume</a>
+            </div>
+        </div>
+        
+    </header>
+
+    <main> 
+
+        <div class="about-me" id="about-me">
+            <div class="about-me-text">
+                <h1>About Me</h1>
+                <p>My name is Grady Algire. I'm a student at the University of Cincinnati studying computer science.
+                   I am passionate about software development, but I'm also actively building in different areas of CS as I narrow down my long-term interests.
+                </p>
+            </div>
+            <div class="about-me-image">
+                <img src="profile-pic.png" alt="profile-pic" width="500" height="500">
+            </div>
+        </div>
+
+        <div class="divider-languages">
+            <h1>/*</h1>
+            <h2>C++</h2>
+            <h2>Python</h2>
+            <h2>Javascript</h2>
+            <h2>SQL</h2>
+            <h2>Progress OpenEdge</h2>
+            <h2>Java</h2>
+            <h2>HTML</h2>
+            <h2>CSS</h2>
+            <h2>VBA</h2>
+            <h2>MATLAB</h2>
+            <h1>*/</h1>
+        </div>
+        
+        <div class="projects" id="projects">
+
+            <div class="info">
+                <div class="project-info">
+                    <h2 id="project-name">Stock Analysis Tool</h2>
+                    <p id="project-description">A close to real-time stock analytics web app with 
+                        chart visualizations, AI-generated investment insights, and support for 
+                        symbol search and favorites management. Built with HTML, CSS, JavaScript, 
+                        and Chart.js, powered by OpenAI, Alpha Vantage, and Finnhub APIs.</p>
+                </div>
+                <div class="project-info">
+                    <h2 id="project-name">Example Project</h2>
+                    <p id="project-description">An interactive dashboard that tracks real-time 
+                        cryptocurrency prices, sentiment trends, and volatility indicators. Includes 
+                        visual charting, portfolio simulation, and news aggregation via CoinGecko 
+                        and NewsAPI.</p>
+                </div>
+                <div class="project-info">
+                    <h2 id="project-name">Example Project</h2>
+                    <p id="project-description">A minimalist productivity app that combines a task 
+                        board with priority-based sorting, deadline alerts, and light/dark theme 
+                        support. Built with vanilla JavaScript and localStorage for persistence—no 
+                        backend required.</p>
+                </div>
+            </div>
+
+            <div class="project-slider">
+                <button id="prev"><</button>
+                <div class="project-card">
+                    <img src="project_cards/stock_analysis_tool.png" style="width: 600px; height: 400px;" alt="">
+                </div>
+                <div class="project-card">
+                    <img src="project_cards/test2.png" alt="">
+                </div>
+                <div class="project-card">
+                    <img src="project_cards/test3.png" alt="">
+                </div>
+                <button id="next">></button>
+            </div>
+        </div>
+
+        <div class="divider-contact">
+            <h1>/*</h1>
+            <h2>Contact me:</h2>
+            <form class="form" action="mailto:gdalgire04@gmail.com" method="POST" enctype="text/plain">
+                <div class="name">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="email">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+          
+                <div class="message">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="3" required></textarea>
+                    <button type="submit">Send Message</button>
+                </div>
+              </form>
+            <h1>*/</h1>
+        </div>
+        
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
