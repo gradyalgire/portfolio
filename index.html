@@ -14,13 +14,18 @@
         <h1>Grady Algire</h1>
 
         <div class="nav-bar">
-            <div class="links">
-                <a href="#about-me">About</a>
-                <a href="#projects">Projects</a>
+            <div class="links" id="links">
+                <a href="#about-me" class="smooth-link">About</a>
+                <a href="#projects" class="smooth-link">Projects</a>
                 <a href="https://github.com/gradyalgire" target="_blank">Github</a>
                 <a href="https://www.linkedin.com/in/grady-algire-abb44a265/" target="_blank">LinkedIn</a>
                 <a href="resume.pdf" target="_blank">Resume</a>
             </div>
+
+            <label class="theme-switch">
+                <input type="checkbox" id="themeToggle">
+                <span class="slider"></span>
+            </label> 
         </div>
         
     </header>
@@ -66,17 +71,14 @@
                 </div>
                 <div class="project-info">
                     <h2 id="project-name">Example Project</h2>
-                    <p id="project-description">An interactive dashboard that tracks real-time 
-                        cryptocurrency prices, sentiment trends, and volatility indicators. Includes 
-                        visual charting, portfolio simulation, and news aggregation via CoinGecko 
-                        and NewsAPI.</p>
+                    <p id="project-description">Example description. The description for my next
+                        project will go here. This is a placeholder for now.
+                    </p>
                 </div>
                 <div class="project-info">
                     <h2 id="project-name">Example Project</h2>
-                    <p id="project-description">A minimalist productivity app that combines a task 
-                        board with priority-based sorting, deadline alerts, and light/dark theme 
-                        support. Built with vanilla JavaScript and localStorage for persistence—no 
-                        backend required.</p>
+                    <p id="project-description">Example description. The description for my next
+                        project will go here. This is a placeholder for now.</p>
                 </div>
             </div>
 
@@ -120,5 +122,6 @@
         
     </main>
     <script src="script.js"></script>
+    <script src="theme.js" defer></script>
 </body>
 </html>

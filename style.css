@@ -3,25 +3,30 @@ body {
     font-family: 'Roboto Mono', monospace; /* font style */ 
 }
 
-html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 100px; /* adjust based on header height */
-  }  
+body.light {
+    background-color: #f0f0f0;
+    color: #111111;
+    border-block-color: #111111; /* border color */
+}
+
+body.dark {
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+    border-block-color: #f0f0f0; /* border color */
+}
 
 /* ===== Header ===== */
 header {
+    background-color: inherit; /* inherit color from body */
     position: sticky; /* keeps header at the top of the page */
     top: 0; /* position from the top (required for sticky to work) */
-
-    background-color: #ffffff;
-    color: #000000; 
     padding: 0 30px; /* space around the header */
 
     display: flex; /* enables flexbox layout */
     align-items: center; /* centers vertically */
     justify-content: space-between; /* space between items */
 
-    border-block: 2px solid #000000; /* line border on top and bottom*/
+    border-block: 2px solid; /* line border on top and bottom*/
 }
 
 /* === Navigation Bar === */
@@ -30,6 +35,7 @@ header .nav-bar {
     align-items: center; /* centers vertically */
     justify-content: space-between; /* space between items */
     position: relative; /* allows absolute positioning of child elements */
+    gap: 30px; /* space between items */
 }
 
 .nav-bar .links {
@@ -39,15 +45,61 @@ header .nav-bar {
 
 /* individual nav bar links */
 .links a {
-    color: #000000;
+    color: inherit;
     text-decoration: none; /* removes underline from links */
 }
 
 .links a:hover {
     text-decoration: underline; /* adds underline on hover */
-    color: #000000;
+    color: inherit;
     transition: color 0.3s ease; /* smooth transition for color change */
     scale: 1.1; /* scales up the link on hover */
+}
+
+.theme-switch {
+    position: relative;
+    display: inline-block;
+    width: 52px;
+    height: 28px;
+}
+
+.theme-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #999999;
+    transition: 0.3s;
+    border-radius: 28px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 22px;
+    width: 22px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.3s;
+    border-radius: 50%;
+}
+
+.theme-switch input:checked + .slider {
+    background-color: white;
+}
+
+.theme-switch input:checked + .slider:before {
+    transform: translateX(24px);
+    background-color: #999999;
 }
 /* === Navigation Bar End === */
 /* ===== Header End ===== */
@@ -83,7 +135,7 @@ header .nav-bar {
     padding: 0 30px; /* space around the section */;
     font-size: 20px; /* font size */
 
-    border-block: 2px solid #000000; /* line border on top and bottom*/
+    border-block: 2px solid; /* line border on top and bottom*/
 }
 /* === Skills End === */
 
@@ -130,7 +182,8 @@ header .nav-bar {
     font-size: xxx-large; /* font size */
     font-family: monospace;
     font-weight: bold;
-    opacity: 0.2; /* initial opacity */
+    opacity: 0.3; /* initial opacity */
+    color: inherit;
 }
 
 .project-slider button:hover {
@@ -150,7 +203,7 @@ header .nav-bar {
     transition:  0.5s;
     transition: scale 0.1s; /* smooth transition for scaling */
     left: calc(50% - 300px);
-    border: 2px solid #000000; /* border style */
+    border: 2px solid; /* border style */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 1); /* shadow effect */
     overflow: hidden; /* hides overflow content */
 }
@@ -168,7 +221,7 @@ header .nav-bar {
     justify-content: space-between; /* centers horizontally */
     padding: 0 30px; /* space around the section */;
 
-    border-block: 2px solid #000000; /* line border on top and bottom*/
+    border-block: 2px solid; /* line border on top and bottom*/
 }
 
 form {

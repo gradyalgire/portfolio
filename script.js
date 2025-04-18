@@ -52,3 +52,16 @@ prev.onclick = function(){
     active = active - 1 >= 0 ? active -1 : active;
     loadShow();
 }
+// Lun Dev Code End
+
+// Smooth Scroll for Anchor Links
+document.querySelectorAll('a.smooth-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            const top = target.getBoundingClientRect().top + window.pageYOffset - 80; // offset for sticky header
+            window.scrollTo({ top, behavior: 'smooth' });
+        }
+    });
+});
