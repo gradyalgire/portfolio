@@ -65,25 +65,3 @@ document.querySelectorAll('a.smooth-link').forEach(link => {
         }
     });
 });
-
-// Contact Form Submission
-document.getElementById('contact-form').addEventListener('submit', async function(e) {
-    e.preventDefault();
-    const formData = {
-        name: e.target.user_name.value,
-        email: e.target.user_email.value,
-        message: e.target.message.value
-    };
-
-    const res = await fetch('/.netlify/functions/sendEmail', {
-        method: 'POST',
-        body: JSON.stringify(formData)
-    });
-
-    if (res.ok) {
-        alert('Message sent!');
-        e.target.reset();
-    } else {
-        alert('Failed to send.');
-    }
-});
