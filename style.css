@@ -137,6 +137,20 @@ header .nav-bar {
 
     border-block: 2px solid; /* line border on top and bottom*/
 }
+
+.languages {
+    display: flex; /* enables flexbox layout */
+    align-items: center; /* centers vertically */
+    justify-content: space-between; /* centers horizontally */
+    font-size: 20px; /* font size */
+}
+
+.languages a {
+    display: flex; /* enables flexbox layout */
+    align-items: center; /* centers vertically */
+    color: inherit;
+    text-decoration: none; /* removes underline from links */
+}
 /* === Skills End === */
 
 /* === Projects === */
