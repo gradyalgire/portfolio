@@ -3,9 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Gradys Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        (function() {
+            emailjs.init('your_public_key');
+        })();
+    </script>
 </head>
 <body>
 
@@ -100,23 +106,23 @@
         <div class="divider-contact">
             <h1>/*</h1>
             <h2>Contact me:</h2>
-            <form class="form" action="mailto:gdalgire04@gmail.com" method="POST" enctype="text/plain">
+            <form id="contact-form">
                 <div class="name">
                     <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
+                    <input type="text" id="name" name="user_name" required>
                 </div>
-                
+            
                 <div class="email">
                     <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
+                    <input type="email" id="email" name="user_email" required>
                 </div>
-          
+            
                 <div class="message">
                     <label for="message">Message:</label>
                     <textarea id="message" name="message" rows="3" required></textarea>
                     <button type="submit">Send Message</button>
                 </div>
-              </form>
+            </form>
             <h1>*/</h1>
         </div>
         

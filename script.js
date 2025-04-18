@@ -1,4 +1,4 @@
-// Source: Lun Dev Code
+// source: Lun Dev Code
 let cards = document.querySelectorAll('.projects .project-slider .project-card');
 let card_info = document.querySelectorAll('.projects .project-info');
 
@@ -52,9 +52,9 @@ prev.onclick = function(){
     active = active - 1 >= 0 ? active -1 : active;
     loadShow();
 }
-// Lun Dev Code End
+// Lun Dev Code end
 
-// Smooth Scroll for Anchor Links
+// smooth scroll for anchor links
 document.querySelectorAll('a.smooth-link').forEach(link => {
     link.addEventListener('click', function(e) {
         e.preventDefault();
@@ -64,4 +64,17 @@ document.querySelectorAll('a.smooth-link').forEach(link => {
             window.scrollTo({ top, behavior: 'smooth' });
         }
     });
+});
+
+// emailJS form handling
+document.getElementById('contact-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    emailjs.sendForm('service_uzsy39v', 'template_lldpzx4', this, 'pUM5PSrSTk5bhgLHF')
+        .then(function () {
+            alert('Message sent successfully.');
+        }, function (error) {
+            alert('Failed to send message. Please try again later.');
+            console.error(error);
+        });
 });
