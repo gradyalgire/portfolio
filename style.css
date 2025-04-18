@@ -81,6 +81,7 @@ header .nav-bar {
     align-items: center; /* centers vertically */
     justify-content: space-between; /* centers horizontally */
     padding: 0 30px; /* space around the section */;
+    font-size: 20px; /* font size */
 
     border-block: 2px solid #000000; /* line border on top and bottom*/
 }
@@ -150,6 +151,7 @@ header .nav-bar {
     transition: scale 0.1s; /* smooth transition for scaling */
     left: calc(50% - 300px);
     border: 2px solid #000000; /* border style */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 1); /* shadow effect */
     overflow: hidden; /* hides overflow content */
 }
 
