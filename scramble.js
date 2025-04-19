@@ -1,4 +1,4 @@
-// Text Scramble Effect
+// Text Scramble Effect - claude ai
 class TextScramble {
     constructor(el) {
       this.el = el;
@@ -133,11 +133,21 @@ class TextScramble {
     projectLink.addEventListener('click', function(e) {
       // Check if user is already at the top
       if (window.scrollY > 700) {
-        e.preventDefault(); // Prevent default scroll behavior
+        // Check cooldown
+        const now = Date.now();
+        if (now - lastClickTime < COOLDOWN_PERIOD) {
+          e.preventDefault();
+          return; // Still in cooldown period
+        }
         
-        // Scramble the "About Me" heading
+        // Scramble the "Project" heading
         const projectsHeading = document.querySelector('.project-info h2');
-        scrambleElement(projectsHeading);
+        const scrambleStarted = scrambleElement(projectsHeading);
+
+        if (scrambleStarted) {
+            e.preventDefault(); // Prevent default scroll behavior
+            lastClickTime = now; // Update last click time
+        }
       }
     });
   });
