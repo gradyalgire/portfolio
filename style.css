@@ -1,6 +1,7 @@
 /* ===== Body Styles ===== */
 body {
     font-family: 'Roboto Mono', monospace; /* font style */ 
+    margin: 0; /* removes default margin */
 }
 
 body.light {
@@ -20,13 +21,33 @@ header {
     background-color: inherit; /* inherit color from body */
     position: sticky; /* keeps header at the top of the page */
     top: 0; /* position from the top (required for sticky to work) */
-    padding: 0 30px; /* space around the header */
+    padding: 0px 30px; /* space around the header */
 
     display: flex; /* enables flexbox layout */
     align-items: center; /* centers vertically */
     justify-content: space-between; /* space between items */
 
     border-block: 2px solid; /* line border on top and bottom*/
+}
+
+/* Text scramble effect styles */
+.scramble-char {
+    color: inherit;
+    opacity: 0.8;
+    display: inline-block;
+    animation: pulse 0.3s infinite alternate;
+}
+  
+@keyframes pulse {
+    from { transform: scale(1); opacity: 0.8; }
+    to { transform: scale(1.05); opacity: 1; }
+}
+  
+/* Ensure the name area maintains its space during animation */
+header h1 {
+    min-width: 200px;
+    min-height: 40px;
+    display: inline-block;
 }
 
 /* === Navigation Bar === */

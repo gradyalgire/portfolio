@@ -58,9 +58,16 @@ prev.onclick = function(){
 document.querySelectorAll('a.smooth-link').forEach(link => {
     link.addEventListener('click', function(e) {
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
+        const href = this.getAttribute('href');
+        const target = document.querySelector(href);
+        
         if (target) {
-            const top = target.getBoundingClientRect().top + window.pageYOffset - 80; // offset for sticky header
+            // ff it's the about section and we're already at the top, do nothing
+            if (href === '#about-me' && window.scrollY < 100) {
+                return;
+            }
+            
+            const top = target.getBoundingClientRect().top + window.pageYOffset - 80;
             window.scrollTo({ top, behavior: 'smooth' });
         }
     });
