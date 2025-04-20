@@ -91,7 +91,7 @@ class TextScramble {
         // Remove from active scrambles when complete
         activeScrambles.delete(element);
       });
-    }, 200);
+    }, 100);
     
     return true; // Successfully started scrambling
   }

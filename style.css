@@ -243,6 +243,14 @@ header .nav-bar {
     overflow: hidden; /* hides overflow content */
 }
 
+body.light .project-card {
+    box-shadow: 0 8px 16px rgba(17, 17, 17, 1);
+}
+
+body.dark .project-card {
+    box-shadow: 0 8px 16px rgba(240, 240, 240, 0.1);
+}
+
 .project-card:hover {
     scale: 1.02; /* scales up the card on hover */
     cursor: pointer; /* pointer cursor on hover */
