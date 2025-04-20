@@ -17,27 +17,27 @@ function loadShow(){
     let stt = 0;
     for(var i = active + 1; i < cards.length; i ++){
         stt++;
-        cards[i].style.transform = `translateX(${120*stt}px) scale(${1 - 0.2*stt}) perspective(16px)`;
+        cards[i].style.transform = `translateX(${120*stt}px) scale(${1 - 0.3*stt}) perspective(16px)`;
         cards[i].style.zIndex = -stt;
-        cards[i].style.filter = 'blur(5px)';
-        cards[i].style.opacity = 0;
+        cards[i].style.filter = 'blur(0px)';
+        cards[i].style.opacity = stt > 2 ? 0 : 1;
 
         card_info[i].style.transform = `translateX(${120*stt}px) scale(${1 - 0.2*stt}) perspective(16px)`;
         card_info[i].style.zIndex = -stt;  
-        card_info[i].style.filter = 'blur(5px)';
+        card_info[i].style.filter = 'blur(0px)';
         card_info[i].style.opacity = 0;
     }
      stt = 0;
     for(var i = (active - 1); i >= 0; i --){
         stt++;
-        cards[i].style.transform = `translateX(${-120*stt}px) scale(${1 - 0.2*stt}) perspective(16px)`;
+        cards[i].style.transform = `translateX(${-120*stt}px) scale(${1 - 0.3*stt}) perspective(16px)`;
         cards[i].style.zIndex = -stt;
-        cards[i].style.filter = 'blur(5px)';
-        cards[i].style.opacity = 0;
+        cards[i].style.filter = 'blur(0px)';
+        cards[i].style.opacity = stt > 2 ? 0 : 1;
 
         card_info[i].style.transform = `translateX(${-120*stt}px) scale(${1 - 0.2*stt}) perspective(16px)`;
         card_info[i].style.zIndex = -stt;
-        card_info[i].style.filter = 'blur(5px)';
+        card_info[i].style.filter = 'blur(0px)';
         card_info[i].style.opacity = 0;
     }
 }

@@ -1,7 +1,14 @@
 /* ========== Body Styles ========== */
 body {
     font-family: 'Roboto Mono', monospace; /* font style */ 
+    font-size: 22px; /* font size */
     margin: 0; /* removes default margin */
+}
+body header {
+    font-size: 16px; /* font size */
+}
+body .project-slider button {
+    font-size: xxx-large; /* font size */
 }
 body.light {
     background-color: #f0f0f0;
@@ -128,8 +135,7 @@ header .nav-bar {
     padding: 100px 300px; /* space around the section */
 }
 .about-me-text {
-    max-width: 500px;
-    font-size: 22px; /* font size */
+    max-width: 550px;
 }
 .about-me-image img {
     border-radius: 50%;
@@ -147,20 +153,23 @@ header .nav-bar {
     align-items: center; /* centers vertically */
     justify-content: space-between; /* centers horizontally */
     padding: 0 30px; /* space around the section */;
-    font-size: 20px; /* font size */
     border-block: 2px solid; /* line border on top and bottom*/
 }
 .languages {
     display: flex; /* enables flexbox layout */
     align-items: center; /* centers vertically */
     justify-content: space-between; /* centers horizontally */
-    font-size: 20px; /* font size */
 }
 .languages a {
     display: flex; /* enables flexbox layout */
     align-items: center; /* centers vertically */
     color: inherit;
     text-decoration: none; /* removes underline from links */
+}
+.languages img {
+    width: 35px; /* width of the image */
+    height: 35px; /* height of the image */
+    margin-right: 2px; /* space on the right */
 }
 /* === Skills End === */
 
@@ -170,17 +179,17 @@ header .nav-bar {
     display: flex; /* enables flexbox layout */
     align-items: center; /* centers vertically */
     justify-content: space-between; /* centers horizontally */
-    padding: 100px 250px; /* space around the section */
-    gap: 50px; /* space between items */
+    padding: 100px 150px; /* space around the section */
+    gap: 0px; /* space between items */
 }
 .info {
     position: relative;
-    height: 550px;
-    width: 700px;
+    height: 500px;
+    width: 550px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 22px;
+    margin-left: 150px; /* space on the right */
 }
 .project-info {
     position: absolute;
@@ -201,7 +210,6 @@ header .nav-bar {
     position: relative;
     border: none; /* no border */
     cursor: pointer; /* pointer cursor on hover */
-    font-size: xxx-large; /* font size */
     font-family: monospace;
     font-weight: bold;
     opacity: 0.3; /* initial opacity */
@@ -210,7 +218,7 @@ header .nav-bar {
 .project-slider button:hover {
     border: none; /* no border */
     cursor: pointer; /* pointer cursor on hover */
-    opacity: 1; /* initial opacity */
+    opacity: 1; /* hover opacity */
     transition: opacity 0.3s ease; /* smooth transition for opacity change */
 }
 .project-card {
@@ -220,15 +228,14 @@ header .nav-bar {
     text-align: justify;
     border-radius: 20px;
     padding: 0px;
-    transition:  0.5s;
-    transition: scale 0.1s; /* smooth transition for scaling */
+    transition:  0.3s;
     left: calc(50% - 300px);
     border: 2px solid; /* border style */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 1); /* shadow effect */
     overflow: hidden; /* hides overflow content */
 }
 body.light .project-card {
-    box-shadow: 0 8px 16px rgba(17, 17, 17, 1);
+    box-shadow: 0 8px 16px rgba(17, 17, 17, .1);
 }
 body.dark .project-card {
     box-shadow: 0 8px 16px rgba(240, 240, 240, 0.1);
@@ -252,7 +259,6 @@ form {
     display: flex; /* enables flexbox layout */
     align-items: center; /* centers vertically */
     gap: 75px; /* space between items */
-    font-size: 20px; /* font size */
     font-weight: bold; /* font weight */
 }
 
@@ -263,34 +269,27 @@ form .message {
 }
 form .name input,
 form .email input {
-    font-weight: bold;
-    font-size: 20px; /* font size */
     padding: 5px; /* space inside the input */
-    border: 2px solid #000000; /* border style */
     border-radius: 5px; /* rounded corners */
+    width: 200px; /* width of the input */
+    background-color: #ffffff; /* background color */
 }
 form .message textarea {
-    font-weight: bold;
-    font-size: 16px; /* font size */
     padding: 5px; /* space inside the input */
-    border: 2px solid #000000; /* border style */
     border-radius: 5px; /* rounded corners */
     width: 300px; /* width of the textarea */;
+    border: 2px solid; /* border style */
 }
 form .message button {
-    font-weight: bold;
-    font-size: 15px; /* font size */
     padding: 5px 10px; /* space inside the button */
-    border: 2px solid #000000; /* border style */
     border-radius: 5px; /* rounded corners */
     background-color: #ffffff; /* background color */
     cursor: pointer; /* pointer cursor on hover */
 }
 form .message button:hover {
-    font-weight: bold;
-    font-size: 16px; /* font size */
-    padding: 4px 5.5px; /* space inside the button */
-    border: 3px solid #000000; /* border style */
+    font-weight: bold; /* font weight */
+    scale: 1.05; /* scales up the button on hover */
+    padding: 5px 8.5px; /* space inside the button */
     border-radius: 5px; /* rounded corners */
     background-color: #ffffff; /* background color */
     cursor: pointer; /* pointer cursor on hover */
