@@ -1,54 +1,53 @@
-/* ===== Body Styles ===== */
+/* ========== Body Styles ========== */
 body {
     font-family: 'Roboto Mono', monospace; /* font style */ 
     margin: 0; /* removes default margin */
 }
-
 body.light {
     background-color: #f0f0f0;
-    color: #111111;
-    border-block-color: #111111; /* border color */
+    color: #1e1e1e;
+    border-block-color: #1e1e1e; /* border color */
 }
-
 body.dark {
     background-color: #1e1e1e;
     color: #f0f0f0;
     border-block-color: #f0f0f0; /* border color */
 }
+/* ========== Body End ========== */
 
-/* ===== Header ===== */
+
+/* ========== Header ========== */
 header {
     background-color: inherit; /* inherit color from body */
     position: sticky; /* keeps header at the top of the page */
-    top: 0; /* position from the top (required for sticky to work) */
+    top: 0px; /* position from the top (required for sticky to work) */
     padding: 0px 30px; /* space around the header */
-
     display: flex; /* enables flexbox layout */
     align-items: center; /* centers vertically */
     justify-content: space-between; /* space between items */
-
     border-block: 2px solid; /* line border on top and bottom*/
 }
 
-/* Text scramble effect styles */
+
+/* === Text Scramble ===*/
 .scramble-char {
     color: inherit;
     opacity: 0.8;
     display: inline-block;
     animation: pulse 0.3s infinite alternate;
 }
-  
 @keyframes pulse {
     from { transform: scale(1); opacity: 0.8; }
     to { transform: scale(1.05); opacity: 1; }
 }
-  
 /* Ensure the name area maintains its space during animation */
 header h1 {
     min-width: 200px;
     min-height: 40px;
     display: inline-block;
 }
+/* === Text Scramble End ===*/
+
 
 /* === Navigation Bar === */
 header .nav-bar {
@@ -58,18 +57,14 @@ header .nav-bar {
     position: relative; /* allows absolute positioning of child elements */
     gap: 30px; /* space between items */
 }
-
 .nav-bar .links {
     display: flex; /* enables flexbox layout (needed for gap) */
     gap: 30px; /* space between items */
 }
-
-/* individual nav bar links */
 .links a {
     color: inherit;
     text-decoration: none; /* removes underline from links */
 }
-
 .links a:hover {
     text-decoration: underline; /* adds underline on hover */
     color: inherit;
@@ -77,19 +72,19 @@ header .nav-bar {
     scale: 1.1; /* scales up the link on hover */
 }
 
+
+/* === Theme Switch === */
 .theme-switch {
     position: relative;
     display: inline-block;
     width: 52px;
     height: 28px;
 }
-
 .theme-switch input {
     opacity: 0;
     width: 0;
     height: 0;
 }
-
 .slider {
     position: absolute;
     cursor: pointer;
@@ -101,7 +96,6 @@ header .nav-bar {
     transition: 0.3s;
     border-radius: 28px;
 }
-
 .slider:before {
     position: absolute;
     content: "";
@@ -113,19 +107,19 @@ header .nav-bar {
     transition: 0.3s;
     border-radius: 50%;
 }
-
 .theme-switch input:checked + .slider {
     background-color: white;
 }
-
 .theme-switch input:checked + .slider:before {
     transform: translateX(24px);
     background-color: #999999;
 }
+/* === Theme Switch End === */
 /* === Navigation Bar End === */
-/* ===== Header End ===== */
+/* ========== Header End ========== */
 
-/* ===== Main ===== */
+
+/* ========== Main ========== */
 /* === About Me === */
 .about-me {
     display: flex; /* enables flexbox layout */
@@ -133,12 +127,10 @@ header .nav-bar {
     justify-content: space-between; /* centers horizontally */
     padding: 100px 300px; /* space around the section */
 }
-
 .about-me-text {
     max-width: 500px;
     font-size: 22px; /* font size */
 }
-
 .about-me-image img {
     border-radius: 50%;
     width: 500px;       /* or any fixed size */
@@ -148,6 +140,7 @@ header .nav-bar {
 }
 /* === About Me End === */
 
+
 /* === Skills === */
 .divider-languages {
     display: flex; /* enables flexbox layout */
@@ -155,17 +148,14 @@ header .nav-bar {
     justify-content: space-between; /* centers horizontally */
     padding: 0 30px; /* space around the section */;
     font-size: 20px; /* font size */
-
     border-block: 2px solid; /* line border on top and bottom*/
 }
-
 .languages {
     display: flex; /* enables flexbox layout */
     align-items: center; /* centers vertically */
     justify-content: space-between; /* centers horizontally */
     font-size: 20px; /* font size */
 }
-
 .languages a {
     display: flex; /* enables flexbox layout */
     align-items: center; /* centers vertically */
@@ -173,6 +163,7 @@ header .nav-bar {
     text-decoration: none; /* removes underline from links */
 }
 /* === Skills End === */
+
 
 /* === Projects === */
 .projects {
@@ -182,7 +173,6 @@ header .nav-bar {
     padding: 100px 250px; /* space around the section */
     gap: 50px; /* space between items */
 }
-
 .info {
     position: relative;
     height: 550px;
@@ -192,12 +182,10 @@ header .nav-bar {
     justify-content: center;
     font-size: 22px;
 }
-
 .project-info {
     position: absolute;
     overflow: hidden; /* hides overflow content */
 }
-
 .project-slider {
     position: relative;
     display: flex; /* enables flexbox layout */
@@ -208,7 +196,6 @@ header .nav-bar {
     width: 800px;
     overflow: hidden;
 }
-
 .project-slider button {
     background-color: transparent; /* transparent background */
     position: relative;
@@ -220,14 +207,12 @@ header .nav-bar {
     opacity: 0.3; /* initial opacity */
     color: inherit;
 }
-
 .project-slider button:hover {
     border: none; /* no border */
     cursor: pointer; /* pointer cursor on hover */
     opacity: 1; /* initial opacity */
     transition: opacity 0.3s ease; /* smooth transition for opacity change */
 }
-
 .project-card {
     position: absolute;
     width: 600px;
@@ -242,20 +227,18 @@ header .nav-bar {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 1); /* shadow effect */
     overflow: hidden; /* hides overflow content */
 }
-
 body.light .project-card {
     box-shadow: 0 8px 16px rgba(17, 17, 17, 1);
 }
-
 body.dark .project-card {
     box-shadow: 0 8px 16px rgba(240, 240, 240, 0.1);
 }
-
 .project-card:hover {
     scale: 1.02; /* scales up the card on hover */
     cursor: pointer; /* pointer cursor on hover */
 }
 /* === Projects End === */
+
 
 /* === Contact === */
 .divider-contact {
@@ -263,15 +246,12 @@ body.dark .project-card {
     align-items: center; /* centers vertically */
     justify-content: space-between; /* centers horizontally */
     padding: 0 30px; /* space around the section */;
-
     border-block: 2px solid; /* line border on top and bottom*/
 }
-
 form {
     display: flex; /* enables flexbox layout */
     align-items: center; /* centers vertically */
     gap: 75px; /* space between items */
-
     font-size: 20px; /* font size */
     font-weight: bold; /* font weight */
 }
@@ -281,7 +261,6 @@ form .message {
     align-items: center; /* centers vertically */
     gap: 10px; /* space between items */
 }
-
 form .name input,
 form .email input {
     font-weight: bold;
@@ -290,7 +269,6 @@ form .email input {
     border: 2px solid #000000; /* border style */
     border-radius: 5px; /* rounded corners */
 }
-
 form .message textarea {
     font-weight: bold;
     font-size: 16px; /* font size */
@@ -299,7 +277,6 @@ form .message textarea {
     border-radius: 5px; /* rounded corners */
     width: 300px; /* width of the textarea */;
 }
-
 form .message button {
     font-weight: bold;
     font-size: 15px; /* font size */
@@ -309,7 +286,6 @@ form .message button {
     background-color: #ffffff; /* background color */
     cursor: pointer; /* pointer cursor on hover */
 }
-
 form .message button:hover {
     font-weight: bold;
     font-size: 16px; /* font size */
@@ -320,4 +296,4 @@ form .message button:hover {
     cursor: pointer; /* pointer cursor on hover */
 }
 /* === Contact End === */
-/* ===== Main End ===== */
+/* ========== Main End ========== */

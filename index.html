@@ -10,11 +10,16 @@
 </head>
 <body>
 
+    <!-- Header -->
     <header>
 
+        <!-- Title -->
         <h1>Grady Algire</h1>
 
+        <!-- Navigation Bar -->
         <div class="nav-bar">
+
+            <!-- Links -->
             <div class="links" id="links">
                 <a href="#about-me" class="smooth-link">About</a>
                 <a href="#projects" class="smooth-link">Projects</a>
@@ -23,17 +28,23 @@
                 <a href="resume.pdf" target="_blank">Resume</a>
             </div>
 
+            <!-- Theme Switch -->
             <label class="theme-switch">
                 <input type="checkbox" id="themeToggle">
                 <span class="slider"></span>
             </label> 
+
         </div>
-        
+
     </header>
 
+    <!-- Main -->
     <main> 
 
+        <!-- About Me -->
         <div class="about-me" id="about-me">
+
+            <!-- About Me Text -->
             <div class="about-me-text">
                 <h1>About Me</h1>
                 <p>My name is Grady Algire. I'm a student at the University of Cincinnati studying 
@@ -41,11 +52,15 @@
                     actively building in different areas of CS as I narrow down my long-term interests.
                 </p>
             </div>
+
+            <!-- About Me Image -->
             <div class="about-me-image">
                 <img src="profile-pic.png" alt="profile-pic" width="500" height="500">
             </div>
+
         </div>
 
+        <!-- Skills Divider -->
         <div class="divider-languages">
             <h1>/*</h1>
             <div class="languages">
@@ -90,7 +105,8 @@
             </div>
             <div class="languages">
                 <a href="https://learn.microsoft.com/en-us/dotnet/visual-basic/getting-started/" target="_blank">
-                    <img src="language_icons/vba.png" alt="vba" width="50" height="40">VBA</a>
+                    <img src="language_icons/vba.png" alt="vba" width="50" height="40">VBA
+                </a>
             </div>
             <div class="languages">
                 <a href="https://www.mathworks.com/products/matlab.html" target="_blank">
@@ -100,29 +116,34 @@
             <h1>*/</h1>
         </div>
         
+        <!-- Projects -->
         <div class="projects" id="projects">
 
+            <!-- Project Info -->
             <div class="info">
                 <div class="project-info">
-                    <h2 id="project-name">Stock Analysis Tool</h2>
+                    <h1 id="project-name">Stock Analysis Tool</h1>
                     <p id="project-description">A close to real-time stock analytics web app with 
                         chart visualizations, AI-generated investment insights, and support for 
                         symbol search and favorites management. Built with HTML, CSS, JavaScript, 
-                        and Chart.js, powered by OpenAI, Alpha Vantage, and Finnhub APIs.</p>
+                        and Chart.js, powered by OpenAI, Alpha Vantage, and Finnhub APIs.
+                    </p>
                 </div>
                 <div class="project-info">
-                    <h2 id="project-name">Example Project</h2>
+                    <h1 id="project-name">Example Project</h1>
                     <p id="project-description">Example description. The description for my next
                         project will go here. This is a placeholder for now.
                     </p>
                 </div>
                 <div class="project-info">
-                    <h2 id="project-name">Example Project</h2>
+                    <h1 id="project-name">Example Project</h1>
                     <p id="project-description">Example description. The description for my next
-                        project will go here. This is a placeholder for now.</p>
+                        project will go here. This is a placeholder for now.
+                    </p>
                 </div>
             </div>
 
+            <!-- Content Slider for Projects -->
             <div class="project-slider">
                 <button id="prev"><</button>
                 <div class="project-card">
@@ -138,6 +159,7 @@
             </div>
         </div>
 
+        <!-- Contact Me -->
         <div class="divider-contact">
             <h1>/*</h1>
             <h2>Contact me:</h2>
@@ -146,12 +168,10 @@
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="user_name" required>
                 </div>
-            
                 <div class="email">
                     <label for="email">Email:</label>
                     <input type="email" id="email" name="user_email" required>
                 </div>
-            
                 <div class="message">
                     <label for="message">Message:</label>
                     <textarea id="message" name="message" rows="3" required></textarea>
@@ -160,8 +180,9 @@
             </form>
             <h1>*/</h1>
         </div>
-        
     </main>
+
+    <!-- JS Files -->
     <script src="script.js"></script>
     <script src="theme.js" defer></script>
     <script src="scramble.js"></script>

@@ -141,7 +141,7 @@ class TextScramble {
         }
         
         // Scramble the "Project" heading
-        const projectsHeading = document.querySelector('.project-info h2');
+        const projectsHeading = document.querySelector('.project-info h1');
         const scrambleStarted = scrambleElement(projectsHeading);
 
         if (scrambleStarted) {
