@@ -16,7 +16,7 @@ class TextScramble {
         const from = oldText[i] || '';
         const to = newText[i] || '';
         const start = Math.floor(Math.random() * 40);
-        const end = start + Math.floor(Math.random() * 80) + 60;
+        const end = start + Math.floor(Math.random() * 40) + 30;
         this.queue.push({ from, to, start, end });
       }
       
@@ -37,7 +37,7 @@ class TextScramble {
           complete++;
           output += to;
         } else if (this.frame >= start) {
-          if (!char || Math.random() < 0.15) {
+          if (!char || Math.random() < 0.10) {
             char = this.randomChar();
             this.queue[i].char = char;
           }
@@ -91,7 +91,7 @@ class TextScramble {
         // Remove from active scrambles when complete
         activeScrambles.delete(element);
       });
-    }, 100);
+    }, 1);
     
     return true; // Successfully started scrambling
   }

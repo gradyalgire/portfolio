@@ -1,13 +1,13 @@
 /* ========== Body Styles ========== */
 body {
     font-family: 'Roboto Mono', monospace; /* font style */ 
-    font-size: clamp(12px, 2vw, 22px); /* font size - clamp(min, preffered, max) */
+    font-size: clamp(6px, 2vw, 22px); /* font size - clamp(min, preffered, max) */
     margin: 0; /* removes default margin */
 }
 body header {
     font-size: clamp(8px, 2vw, 16px); /* font size */
 }
-body .project-slider button {
+body .projects button {
     font-size: xxx-large; /* font size */
 }
 body.light {
@@ -92,7 +92,7 @@ header .nav-bar {
     width: 0;
     height: 0;
 }
-.slider {
+.nav-bar .slider {
     position: absolute;
     cursor: pointer;
     top: 0;
@@ -103,7 +103,7 @@ header .nav-bar {
     transition: 0.3s;
     border-radius: 28px;
 }
-.slider:before {
+.nav-bar .slider:before {
     position: absolute;
     content: "";
     height: 22px;
@@ -114,10 +114,10 @@ header .nav-bar {
     transition: 0.3s;
     border-radius: 50%;
 }
-.theme-switch input:checked + .slider {
+.theme-switch input:checked + .nav-bar .slider {
     background-color: white;
 }
-.theme-switch input:checked + .slider:before {
+.theme-switch input:checked + .nav-bar .slider:before {
     transform: translateX(24px);
     background-color: #999999;
 }
@@ -132,8 +132,8 @@ header .nav-bar {
     display: flex; /* enables flexbox layout */
     align-items: center; /* centers vertically */
     justify-content: center; /* centers horizontally */
-    padding: clamp(30px, 5vw, 100px) clamp(30px, 5vw, 300px); /* space around the section */
-    gap: clamp(30px, 5vw, 100px); /* space between items */
+    padding: clamp(1%, 5%, 5%) clamp(5%, 10%, 10%); /* space around the section */
+    gap: clamp(5%, 10%, 10%); /* space between items */
 }
 .about-me-text {
     max-width: 550px;
@@ -178,6 +178,7 @@ header .nav-bar {
     height: 100%; /* responsive height */
     min-width: 10px;
     min-height: 10px;
+    margin-right: 3px; /* space between image and text */
 }
 /* === Skills End === */
 
@@ -187,60 +188,47 @@ header .nav-bar {
     display: flex; /* enables flexbox layout */
     align-items: center; /* centers vertically */
     justify-content: center; /* centers horizontally */
-    padding: 100px 150px; /* space around the section */
-    gap: 0px; /* space between items */
+    padding: clamp(1%, 5%, 5%) clamp(5%, 10%, 10%); /* space around the section */
+    gap: clamp(1%, 7.5%, 10%); /* space between items */
 }
 .info {
     position: relative;
-    height: 500px;
-    width: 550px;
+    height: 50%;
+    width: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 150px; /* space on the right */
 }
 .project-info {
     position: absolute;
     overflow: hidden; /* hides overflow content */
 }
-.project-slider {
+.projects .slider {
     position: relative;
     display: flex; /* enables flexbox layout */
     align-items: center; /* centers vertically */
     justify-content: space-between; /* centers horizontally */
-    width: 100%;
-    height: 550px;
-    width: 800px;
+    width: 50%;
+    height: clamp(100px, 500px, 500px);
     overflow: hidden;
-}
-.project-slider button {
-    background-color: transparent; /* transparent background */
-    position: relative;
-    border: none; /* no border */
-    cursor: pointer; /* pointer cursor on hover */
-    font-family: monospace;
-    font-weight: bold;
-    opacity: 0.3; /* initial opacity */
-    color: inherit;
-}
-.project-slider button:hover {
-    border: none; /* no border */
-    cursor: pointer; /* pointer cursor on hover */
-    opacity: 1; /* hover opacity */
-    transition: opacity 0.3s ease; /* smooth transition for opacity change */
 }
 .project-card {
     position: absolute;
-    width: 600px;
-    height: 400px;
+    width: 80%;
+    height: 80%;
     text-align: justify;
     border-radius: 20px;
     padding: 0px;
     transition:  0.3s;
-    left: calc(50% - 300px);
+    left: 10%;
+    top: 10%;
     border: 2px solid; /* border style */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 1); /* shadow effect */
     overflow: hidden; /* hides overflow content */
+}
+.project-card img {
+    width: 100%; /* full width */
+    height: 100%; /* full height */
 }
 body.light .project-card {
     box-shadow: 0 8px 16px rgba(17, 17, 17, .1);
@@ -251,6 +239,30 @@ body.dark .project-card {
 .project-card:hover {
     scale: 1.02; /* scales up the card on hover */
     cursor: pointer; /* pointer cursor on hover */
+}
+.slider button {
+    background-color: transparent; /* transparent background */
+    position: relative;
+    border: none; /* no border */
+    cursor: pointer; /* pointer cursor on hover */
+    font-family: monospace;
+    font-weight: bold;
+    opacity: 0.3; /* initial opacity */
+    transition: opacity 0.3s ease; /* smooth transition for opacity change */
+    transition: scale 0.3s ease; /* smooth transition for scale change */
+    color: inherit;
+    padding: 0px 0px; /* space inside the button */
+    justify-content: center; /* centers horizontally */
+    align-items: center; /* centers vertically */
+    z-index: 1; /* ensures button is on top of other elements */
+}
+.slider button:hover {
+    border: none; /* no border */
+    cursor: pointer; /* pointer cursor on hover */
+    opacity: 1; /* hover opacity */
+    transition: opacity 0.3s ease; /* smooth transition for opacity change */
+    scale: 1.1; /* scales up the button on hover */
+    transition: scale 0.3s ease; /* smooth transition for scale change */
 }
 /* === Projects End === */
 
@@ -359,33 +371,4 @@ form .message button:hover {
     .divider-languages a {
         flex-direction: column; /* stacks items vertically */
     }
-}
-@media (max-width: 1590px) {
-    .projects {
-        align-items: center; /* centers vertically */
-        justify-content: center; /* centers horizontally */
-        flex-direction: column; /* stacks items vertically */
-        padding: 10px 30px; /* space around the section */
-        gap: 0px; /* space between items */
-    }
-    .projects .info {
-        max-width: 350px; /* max width of the info section */
-        max-height: 200px; /* max height of the info section */
-        margin-left: 0px; /* space on the right */
-    }
-    .project-slider {
-        width: 100%; /* responsive width */
-        height: 300px; /* responsive height */
-    }
-    .project-card {
-        width: 80%; /* responsive width */
-        height: 90%; /* responsive height */
-        left: calc(50% - 40%); /* position from the left (required for absolute positioning) */
-        top: 0px; /* position from the top (required for absolute positioning) */
-        align-items: center; /* centers vertically */
-        justify-content: center; /* centers horizontally */
-    }
-    .project-card:not(.active) {
-        display: none;
-      }
 }
