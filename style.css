@@ -1,0 +1,374 @@
+/* ========== Body Styles ========== */
+body {
+    font-family: 'Roboto Mono', monospace; /* font style */ 
+    font-size: clamp(6px, 2vw, 22px); /* font size - clamp(min, preffered, max) */
+    margin: 0; /* removes default margin */
+}
+body header {
+    font-size: clamp(8px, 2vw, 16px); /* font size */
+}
+body .projects button {
+    font-size: xxx-large; /* font size */
+}
+body.light {
+    background-color: #f0f0f0;
+    color: #1e1e1e;
+    border-block-color: #1e1e1e; /* border color */
+}
+body.dark {
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+    border-block-color: #f0f0f0; /* border color */
+}
+/* ========== Body End ========== */
+
+
+/* ========== Header ========== */
+header {
+    background-color: inherit; /* inherit color from body */
+    position: sticky; /* keeps header at the top of the page */
+    top: 0px; /* position from the top (required for sticky to work) */
+    padding: 0px 30px; /* space around the header */
+    display: flex; /* enables flexbox layout */
+    align-items: center; /* centers vertically */
+    justify-content: space-between; /* space between items */
+    border-block: 2px solid; /* line border on top and bottom*/
+}
+
+
+/* === Text Scramble ===*/
+.scramble-char {
+    color: inherit;
+    opacity: 0.8;
+    display: inline-block;
+    animation: pulse 0.3s infinite alternate;
+}
+@keyframes pulse {
+    from { transform: scale(1); opacity: 0.8; }
+    to { transform: scale(1.05); opacity: 1; }
+}
+/* Ensure the name area maintains its space during animation */
+header h1 {
+    min-width: 200px;
+    min-height: 40px;
+    display: inline-block;
+}
+/* === Text Scramble End ===*/
+
+
+/* === Navigation Bar === */
+header .nav-bar {
+    display: flex; /* enables flexbox layout */
+    align-items: center; /* centers vertically */
+    justify-content: space-between; /* space between items */
+    position: relative; /* allows absolute positioning of child elements */
+    gap: 30px; /* space between items */
+}
+.nav-bar .links {
+    display: flex; /* enables flexbox layout (needed for gap) */
+    gap: 30px; /* space between items */
+}
+.links a {
+    color: inherit;
+    text-decoration: none; /* removes underline from links */
+}
+.links a:hover {
+    text-decoration: underline; /* adds underline on hover */
+    color: inherit;
+    transition: color 0.3s ease; /* smooth transition for color change */
+    scale: 1.1; /* scales up the link on hover */
+}
+
+
+/* === Theme Switch === */
+.theme-switch {
+    position: relative;
+    display: inline-block;
+    width: 52px;
+    height: 28px;
+}
+.theme-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.nav-bar .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #999999;
+    transition: 0.3s;
+    border-radius: 28px;
+}
+.nav-bar .slider:before {
+    position: absolute;
+    content: "";
+    height: 22px;
+    width: 22px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.3s;
+    border-radius: 50%;
+}
+.theme-switch input:checked + .nav-bar .slider {
+    background-color: white;
+}
+.theme-switch input:checked + .nav-bar .slider:before {
+    transform: translateX(24px);
+    background-color: #999999;
+}
+/* === Theme Switch End === */
+/* === Navigation Bar End === */
+/* ========== Header End ========== */
+
+
+/* ========== Main ========== */
+/* === About Me === */
+.about-me {
+    display: flex; /* enables flexbox layout */
+    align-items: center; /* centers vertically */
+    justify-content: center; /* centers horizontally */
+    padding: clamp(1%, 5%, 5%) clamp(5%, 10%, 10%); /* space around the section */
+    gap: clamp(5%, 10%, 10%); /* space between items */
+}
+.about-me-text {
+    max-width: 550px;
+}
+.about-me-image img {
+    border-radius: 50%;
+    max-width: 500px;
+    max-height: 500px;
+    width: 100%; /* responsive width */
+    height: 100%; /* responsive height */
+    min-width: 150px;
+    min-height: 150px;
+    object-fit: cover;  /* ensures the image covers the circle without distortion */
+    border-style: solid; /* border style */
+}
+/* === About Me End === */
+
+
+/* === Skills === */
+.divider-languages {
+    display: flex; /* enables flexbox layout */
+    align-items: center; /* centers vertically */
+    justify-content: space-between; /* centers horizontally */
+    padding: 0 30px; /* space around the section */;
+    border-block: 2px solid; /* line border on top and bottom*/
+}
+.languages {
+    display: flex; /* enables flexbox layout */
+    align-items: center; /* centers vertically */
+    justify-content: space-between; /* centers horizontally */
+}
+.languages a {
+    display: flex; /* enables flexbox layout */
+    align-items: center; /* centers vertically */
+    color: inherit;
+    text-decoration: none; /* removes underline from links */
+}
+.languages img {
+    max-width: 35px; /* width of the image */
+    max-height: 35px; /* height of the image */
+    width: 100%; /* responsive width */
+    height: 100%; /* responsive height */
+    min-width: 10px;
+    min-height: 10px;
+    margin-right: 3px; /* space between image and text */
+}
+/* === Skills End === */
+
+
+/* === Projects === */
+.projects {
+    display: flex; /* enables flexbox layout */
+    align-items: center; /* centers vertically */
+    justify-content: center; /* centers horizontally */
+    padding: clamp(1%, 5%, 5%) clamp(5%, 10%, 10%); /* space around the section */
+    gap: clamp(1%, 7.5%, 10%); /* space between items */
+}
+.info {
+    position: relative;
+    height: 50%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.project-info {
+    position: absolute;
+    overflow: hidden; /* hides overflow content */
+}
+.projects .slider {
+    position: relative;
+    display: flex; /* enables flexbox layout */
+    align-items: center; /* centers vertically */
+    justify-content: space-between; /* centers horizontally */
+    width: 50%;
+    height: clamp(100px, 500px, 500px);
+    overflow: hidden;
+}
+.project-card {
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    text-align: justify;
+    border-radius: 20px;
+    padding: 0px;
+    transition:  0.3s;
+    left: 10%;
+    top: 10%;
+    border: 2px solid; /* border style */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 1); /* shadow effect */
+    overflow: hidden; /* hides overflow content */
+}
+.project-card img {
+    width: 100%; /* full width */
+    height: 100%; /* full height */
+}
+body.light .project-card {
+    box-shadow: 0 8px 16px rgba(17, 17, 17, .1);
+}
+body.dark .project-card {
+    box-shadow: 0 8px 16px rgba(240, 240, 240, 0.1);
+}
+.project-card:hover {
+    scale: 1.02; /* scales up the card on hover */
+    cursor: pointer; /* pointer cursor on hover */
+}
+.slider button {
+    background-color: transparent; /* transparent background */
+    position: relative;
+    border: none; /* no border */
+    cursor: pointer; /* pointer cursor on hover */
+    font-family: monospace;
+    font-weight: bold;
+    opacity: 0.3; /* initial opacity */
+    transition: opacity 0.3s ease; /* smooth transition for opacity change */
+    transition: scale 0.3s ease; /* smooth transition for scale change */
+    color: inherit;
+    padding: 0px 0px; /* space inside the button */
+    justify-content: center; /* centers horizontally */
+    align-items: center; /* centers vertically */
+    z-index: 1; /* ensures button is on top of other elements */
+}
+.slider button:hover {
+    border: none; /* no border */
+    cursor: pointer; /* pointer cursor on hover */
+    opacity: 1; /* hover opacity */
+    transition: opacity 0.3s ease; /* smooth transition for opacity change */
+    scale: 1.1; /* scales up the button on hover */
+    transition: scale 0.3s ease; /* smooth transition for scale change */
+}
+/* === Projects End === */
+
+
+/* === Contact === */
+.divider-contact {
+    display: flex; /* enables flexbox layout */
+    align-items: center; /* centers vertically */
+    justify-content: space-between; /* centers horizontally */
+    padding: 0 30px; /* space around the section */;
+    border-block: 2px solid; /* line border on top and bottom*/
+}
+form {
+    display: flex; /* enables flexbox layout */
+    align-items: center; /* centers vertically */
+    gap: 75px; /* space between items */
+    font-weight: bold; /* font weight */
+}
+
+form .message {
+    display: flex; /* enables flexbox layout */
+    align-items: center; /* centers vertically */
+    gap: 10px; /* space between items */
+}
+form .name input,
+form .email input {
+    padding: 5px; /* space inside the input */
+    border-radius: 5px; /* rounded corners */
+    width: 200px; /* width of the input */
+    background-color: #ffffff; /* background color */
+}
+form .message textarea {
+    padding: 5px; /* space inside the input */
+    border-radius: 5px; /* rounded corners */
+    width: 300px; /* width of the textarea */;
+    border: 2px solid; /* border style */
+}
+form .message button {
+    padding: 5px 10px; /* space inside the button */
+    border-radius: 5px; /* rounded corners */
+    background-color: #ffffff; /* background color */
+    cursor: pointer; /* pointer cursor on hover */
+}
+form .message button:hover {
+    font-weight: bold; /* font weight */
+    scale: 1.05; /* scales up the button on hover */
+    padding: 5px 8.5px; /* space inside the button */
+    border-radius: 5px; /* rounded corners */
+    background-color: #ffffff; /* background color */
+    cursor: pointer; /* pointer cursor on hover */
+}
+/* === Contact End === */
+/* ========== Main End ========== */
+
+
+/* ========== Mobile ========== */
+@media (max-width: 700px) {
+    .divider-contact,
+    .divider-languages {
+        padding: 0 10px; /* space around the section */
+    }
+    .divider-languages a {
+        font-size: 4px; /* font size */
+    }
+    .divider-languages img {
+        width: 5px; /* width of the image */
+        height: 5px; /* height of the image */
+    }
+    .divider-contact {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+        padding: 20px 10px;
+    }
+    form {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+    form .name input,
+    form .email input,
+    form .message textarea {
+        width: 100%;
+        max-width: 250px;
+    }
+    form .message {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    form .message button {
+        width: fit-content;
+    }
+}
+@media (max-width: 825px) {
+    header {
+        justify-content: center; /* centers horizontally */
+        flex-wrap: wrap; /* allows items to wrap to the next line */
+    }
+    .nav-bar {
+        padding: 10px 0px; /* space around the section */
+    }
+}
+@media (max-width: 1300px) {
+    .divider-languages a {
+        flex-direction: column; /* stacks items vertically */
+    }
+}

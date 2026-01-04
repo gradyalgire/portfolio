@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradys Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+
+        <!-- Title -->
+        <h1>Grady Algire</h1>
+
+        <!-- Navigation Bar -->
+        <div class="nav-bar">
+
+            <!-- Links -->
+            <div class="links" id="links">
+                <a href="#about-me" class="smooth-link">About</a>
+                <a href="#projects" class="smooth-link">Projects</a>
+                <a href="https://github.com/gradyalgire" target="_blank">Github</a>
+                <a href="https://www.linkedin.com/in/grady-algire-abb44a265/" target="_blank">LinkedIn</a>
+            </div>
+
+            <!-- Theme Switch -->
+            <label class="theme-switch">
+                <input type="checkbox" id="themeToggle">
+                <span class="slider"></span>
+            </label> 
+
+        </div>
+
+    </header>
+
+    <!-- Main -->
+    <main> 
+
+        <!-- About Me -->
+        <div class="about-me" id="about-me">
+
+            <!-- About Me Text -->
+            <div class="about-me-text">
+                <h1>About Me</h1>
+                <p>My name is Grady Algire. I'm a student at the University of Cincinnati studying 
+                    computer science. I'm passionate about software development, but I'm also 
+                    building in different areas of CS as I narrow down my long-term interests.
+                </p>
+            </div>
+
+            <!-- About Me Image -->
+            <div class="about-me-image">
+                <img src="profile-pic.png" alt="profile-pic" width="500" height="500">
+            </div>
+
+        </div>
+
+        <!-- Skills Divider -->
+        <div class="divider-languages">
+            <h1>/*</h1>
+            <div class="languages">
+                <a href="https://cplusplus.com" target="_blank">
+                    <img src="language_icons/cpp.png" alt="cpp">C++
+                </a>
+            </div>
+            <div class="languages">
+                <a href="https://www.python.org/" target="_blank">
+                    <img src="language_icons/python.png" alt="python">Python
+                </a>
+            </div>
+            <div class="languages">
+                <a href="https://www.javascript.com/" target="_blank">
+                    <img src="language_icons/js.png" alt="js">Javascript
+                </a>
+            </div>
+            <div class="languages">
+                <a href="https://www.mysql.com/" target="_blank">
+                    <img src="language_icons/sql.png" alt="sql">SQL
+                </a>
+            </div>
+            <div class="languages">
+                <a href="https://www.progress.com/openedge" target="_blank">
+                    <img src="language_icons/progress.png" alt="progress">Progress
+                </a>
+            </div>
+            <div class="languages">
+                <a href="https://www.java.com/en/" target="_blank">
+                    <img src="language_icons/java.png" alt="java">Java
+                </a>
+            </div>
+            <div class="languages">
+                <a href="https://html.com/" target="_blank">
+                    <img src="language_icons/html.png" alt="html">HTML
+                </a>
+            </div>
+            <div class="languages">
+                <a href="https://en.wikipedia.org/wiki/CSS" target="_blank">
+                    <img src="language_icons/css.png" alt="css">CSS
+                </a>
+            </div>
+            <div class="languages">
+                <a href="https://learn.microsoft.com/en-us/dotnet/visual-basic/getting-started/" target="_blank">
+                    <img src="language_icons/vba.png" alt="vba">VBA
+                </a>
+            </div>
+            <div class="languages">
+                <a href="https://www.mathworks.com/products/matlab.html" target="_blank">
+                    <img src="language_icons/matlab.png" alt="matlab">MATLAB
+                </a>
+            </div>
+            <h1>*/</h1>
+        </div>
+        
+        <!-- Projects -->
+        <div class="projects" id="projects">
+
+            <!-- Project Info -->
+             <!-- *IMPORTANT* In order for the slider to work, the number of project-info's and project-card's need to be equal -->
+            <div class="info">
+                <div class="project-info">
+                    <h1 id="project-name">Stock Analysis Tool</h1>
+                    <p id="project-description">A close to real-time stock analytics web app with 
+                        chart visualizations, AI-generated investment insights, and support for 
+                        symbol search and favorites management. Built with HTML, CSS, JavaScript, 
+                        and Chart.js, powered by OpenAI, Alpha Vantage, and Finnhub APIs.
+                    </p>
+                </div>
+                <div class="project-info">
+                    <h1 id="project-name">Self Improvement Project</h1>
+                    <p id="project-description">This project is a curated self improvement platform that uses music and media intentionally to support growth. It analyzes songs, videos, books, podcasts, and films based on their emotional impact and underlying message, filtering out content that reinforces fixation, avoidance, or false reassurance. The goal is not to promise comfort, but to help users process emotion honestly, regain clarity, and move forward with discipline and perspective.
+                    </p>
+                </div>
+                <div class="project-info">
+                    <h1 id="project-name">Example Project 2</h1>
+                    <p id="project-description">Example description. The description for my next
+                        project will go here. This is a placeholder for now.
+                    </p>
+                </div>
+                <div class="project-info">
+                    <h1 id="project-name">Example Project 3</h1>
+                    <p id="project-description">Example description. The description for my next
+                        project will go here. This is a placeholder for now.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Content Slider for Projects -->
+            <!-- *IMPORTANT* Make sure all images are 16:9 -->
+            <div class="slider">
+                <button id="prev"><</button>
+                <div class="card-slider">
+                    <div class="project-card">
+                        <a href="https://gradyalgirestockanalysis.com" target="_blank">
+                            <img src="project_cards/stock_analysis_tool.png" style="width: 600px; height: 400px;" alt="">
+                        </a>
+                    </div>
+                    <div class="project-card">
+                        <a href="https://selfimprovementthroughmusic.netlify.app/" target="_blank">
+                            <img src="project_cards/self_improvement.png" alt="">
+                        </a>
+                    </div>
+                    <div class="project-card">
+                        <img src="project_cards/test3.png" alt="">
+                    </div>
+                    <div class="project-card">
+                        <img src="project_cards/test4.png" alt="">
+                    </div>
+                </div>
+                <button id="next">></button>
+            </div>
+        </div>
+
+        <!-- Contact Me -->
+        <div class="divider-contact">
+            <h1>Contact me:</h1>
+            <form id="contact-form">
+                <div class="name">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="user_name" autocomplete="name" required>
+                </div>
+                <div class="email">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="user_email" autocomplete="email" required>
+                </div>
+                <div class="message">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="3" required></textarea>
+                    <button type="submit">Send Message</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <!-- JS Files -->
+    <script src="script.js"></script>
+    <script src="theme.js" defer></script>
+    <script src="scramble.js"></script>
+</body>
+</html>
