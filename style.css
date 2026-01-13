@@ -114,10 +114,10 @@ header .nav-bar {
     transition: 0.3s;
     border-radius: 50%;
 }
-.theme-switch input:checked + .nav-bar .slider {
+.theme-switch input:checked + .slider {
     background-color: white;
 }
-.theme-switch input:checked + .nav-bar .slider:before {
+.theme-switch input:checked + .slider:before {
     transform: translateX(24px);
     background-color: #999999;
 }
